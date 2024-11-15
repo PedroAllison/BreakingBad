@@ -1,0 +1,357 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* Permite desativar o crescimento de uma caixa por conta do padding*/
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 800px;
+    /* background-color: brown; */
+    /* Permite colocar uma foto de fundo pelo CSS */
+    background-image: url(../img/imagens/menu_breaking-bad.webp);
+
+    /* Permite configurar a repetição da imagem */
+    background-repeat: no-repeat;
+
+    /* Permite ajustar a posição da imagem (vertical e horizontal (left top)) */
+    background-position: center;
+
+
+    /* Permite ajustar o tamanho da imagem aplicando zoom para ela caber dentro do espaço (contain ou cover)*/
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
+#menu {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(88, 75, 0, 0.808);
+    /* Propriedades para travar o posicionamento do menu e garantir que ele fique acima de outros elementos */
+    position: fixed;
+    z-index: 999;
+}
+
+#menu ul{
+    width: 45%;
+    height: inherit; /* inherit - Serve para herdar o valor do elemento pai*/
+    margin-left: auto;
+}
+
+#menu ul li a {
+    color: #ffffff; /* Define a cor do texto em branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    display: block; /* Torna o link ocupando toda a área do item de lista */
+    transition: color 0.5s; /* Transição suave para a cor do texto */
+}
+
+#menu ul li{
+    width: 20%;
+    letter-spacing: 1.3px;
+    /* Permite alterar o tipo de marcador da lista */
+    list-style: none;
+    float: right; /*Para alinhar os itens da lista de forma horizontal (mas poderia ser grid ou flex)*/
+    font-family: arial;
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 45px;
+    font-weight: bold;
+}
+
+#menu ul li:hover a {
+    color: #000000; /* Altera a cor do texto para preto ao passar o mouse */
+}
+
+#menu ul li:hover{
+    cursor: pointer;
+    background-color: #ffe608;
+    transition: 1s;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+main{
+    width: 100%;
+    background-color: #ffffff;
+    /*Configuração para deixar o elemento HTML crescendo conforme o seu conteúdo*/
+    min-height: 100px; /*Altura minima*/
+    height: auto;       /*Altura automatica*/
+    overflow: hidden;   /*Desabilita a barra de rolagem da DIV*/
+
+    /* background-color: aquamarine; */
+
+    /* Permite centralizar qualquer objeto no navegador */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* margin: 0 auto 0 auto; */
+}
+
+.section-titulo-Sinopse {
+    width: 99%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    margin-bottom: 0px; /* Espaçamento entre o título e o texto */
+}
+
+.texto-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    width: 98%;
+    padding: 20px;
+    
+}
+
+.texto-padrao {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 10px; /* Espaçamento entre os parágrafos */
+}
+
+/*-------------------------SAIBA MAIS-----------------------------------------*/
+
+.imagemSaibaMais {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 2000px;
+    overflow: hidden;
+}
+
+.imagemSaibaMais img {
+    width: 99%;
+    height: auto;
+    display: block;
+}
+
+.section-titulo2 {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Garantir que o título fique acima da imagem */
+}
+
+.texto-container2 {
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 40px;
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal; /* Permite quebras de linha dentro do texto */
+    max-width: 60%;
+    z-index: 2; /* Garantir que o texto fique acima da imagem */
+}
+
+/*-----------------------------SUCESSO-------------------------------------*/
+
+.imagemSucesso {
+    position: relative;
+    display: inline-block;
+    width: 98%;
+    max-width: 1000px;
+    overflow: hidden;justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente (se necessário) */
+    height: auto; /* Mantém a proporção original da imagem */
+    max-width: 800%; /* Define um tamanho máximo para a imagem */
+    display: block;
+}
+.imagemSucesso img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+/* Adiciona uma camada de cor amarela sobre a imagem */
+.imagemSucesso::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.4); /* Cor amarela com 40% de opacidade */
+    pointer-events: none; /* Permite clicar na imagem normalmente */
+    transition: background-color 0.3s ease; /* Transição suave ao mudar a cor */
+    
+}
+
+
+
+.section-titulo3 {
+    position: absolute;
+    top: 253%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Garantir que o título fique acima da imagem */
+}
+
+.textoSucessoAud{
+    background-color: #ffe608;
+    height: 100%;
+    width: 98%;
+}
+
+
+
+.containerSucesso {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os textos no topo */
+    gap: 20px; /* Espaçamento entre os dois textos */
+}
+
+.textoSucesso1,
+.textoSucesso2 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 1.3em;
+    min-height: 100px;
+    height: auto;
+    overflow: hidden;
+    line-height: 1.5;
+    padding: 10px 20px;
+    width: 50%;
+}
+
+.textoSucesso1 {
+    text-align: left;
+}
+
+.textoSucesso2 {
+    text-align: right;
+}
+
+/*--------------------------EPISODIO----------------------------------------*/
+
+.section-titulo-Ep{
+    width: 99%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 15px;
+    margin-bottom: 0px; /* Espaçamento entre o título e o texto */
+}
+
+.episodios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagemEpisodio1,
+.caixa-episodios2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Imagem à esquerda */
+.imagemEpisodio1 figure {
+    margin: 0;
+    width: 40%;
+}
+
+.imagemEpisodio1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Conteúdo à direita */
+.foto-episodios1 {
+    width: 60%;
+}
+
+/* Imagem à direita */
+.foto-episodios2 {
+    margin: 0;
+    width: 40%;
+    order: 2;
+}
+
+.foto-episodios2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Conteúdo à esquerda */
+.endereco-unidade {
+    width: 60%;
+    order: 1;
+}
+
+.texto-padrao1,.texto-padrao2{
+    width: 85%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding-top: 5px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------------*/
+
+.imagemAvulsa{
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente (se necessário) */
+    padding: 20px; /* Adiciona um espaço ao redor da imagem */
+}
+/*--------------------------CURIOSIDADES----------------------------------------*/
+
+.section-titulo-Curiosidade {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-left: 15px;
+    margin-bottom: 10px; /* Espaçamento entre o título e o texto */
+}
+.imagemCuriosidade {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente (se necessário) */
+    padding: 20px; /* Adiciona um espaço ao redor da imagem */
+}
+
+.imagemCuriosidade img {
+    width: 50%; /* Ajuste a largura conforme necessário (ex.: 50%) */
+    height: auto; /* Mantém a proporção original da imagem */
+    max-width: 300px; /* Define um tamanho máximo para a imagem */
+    display: block;
+}
+
+.fundoPreto{
+    background-color: #000000;
+}
